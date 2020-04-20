@@ -1,0 +1,8 @@
+{
+    "name": "dummy_name_concat",
+    "args": {
+        "first": "Bob",
+        "middle": "Bobby",
+        "last": "Smith"
+    }
+}
