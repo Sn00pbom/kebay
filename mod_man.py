@@ -9,6 +9,6 @@ def load_modules():
     modules = {}
     for name in names:
         path = os.path.join(modules_path, name, 'launch.py')
-        modules[name] = SourceFileLoader(name, path)
+        modules[name] = SourceFileLoader(name, path).load_module()
 
     return modules
