@@ -50,6 +50,8 @@ class MainFrame(tk.Frame):
         option.pack()
         btn = tk.Button(self.master, text='Add', command=self.new_window)
         btn.pack()
+        exebtn = tk.Button(self.master, text='Execute Jobs', command=self.execute_cartridges)
+        exebtn.pack()
 
     def new_window(self):
         if self.opt_var.get() == '':
@@ -61,7 +63,11 @@ class MainFrame(tk.Frame):
         self.nwin = tk.Toplevel(self.master)
         self.app = ArgPopup(args, self.nwin)
 
-        print(self.cartridges)
+    def execute_cartridges(self):
+        for kmod, args in self.cartridges:
+            mod = self.modules[kmod]
+            print(mod.run(*args.values()))
+
 
 def start(modules, args_sets):
     root = tk.Tk()
