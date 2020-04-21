@@ -1,5 +1,5 @@
 {
-    "name": "dummy_add",
+    "name": "add",
     "args": {
         "val1": 1,
         "val2": 1

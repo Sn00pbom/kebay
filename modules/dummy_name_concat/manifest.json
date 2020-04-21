@@ -1,5 +1,5 @@
 {
-    "name": "dummy_name_concat",
+    "name": "name_concat",
     "args": {
         "first": "Bob",
         "middle": "Bobby",
